@@ -43,6 +43,9 @@ class User(AbstractBaseUser):
     openapi_appkey = models.CharField(max_length=35, blank=True, null=True)
     # 是否禁用用户
     is_forbidden = models.BooleanField(default=False)
+    # 表示用户的rating
+    user_rating = models.IntegerField(default=1500)
+    
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []

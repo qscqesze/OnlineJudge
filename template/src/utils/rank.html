@@ -17,6 +17,7 @@
                     <th>通过的题目数量</th>
                     <th>总提交数量</th>
                     <th>AC 率</th>
+                    <th>rating</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,7 @@
                         <td>{{ rank.accepted_problem_number }}</td>
                         <td>{{ rank.submission_number }}</td>
                         <td>{% widthratio rank.accepted_problem_number rank.submission_number 100 %}%</td>
+                        <td>{{ rank.user_rating }}</td>
                     </tr>
                 {% endfor %}
 
